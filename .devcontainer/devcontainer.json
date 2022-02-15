@@ -1,0 +1,24 @@
+
+{
+  "name": "Airflow-standalone",
+  "build": { "dockerfile": "../Dockerfile" },
+  "mounts": [
+    "source=${localWorkspaceFolder}/dags,target=/root/airflow/dags,type=bind",
+    "source=${localWorkspaceFolder}/airflow.cfg,target=/root/airflow/airflow.cfg,type=bind"
+   ],
+  "remoteEnv": {},
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ],
+  // "postAttachCommand": "pip install apache-airflow==${AIRFLOW_VERSION} --constraint ${CONSTRAINT_URL}"
+
+// # The Standalone command will initialise the database, make a user,
+// # and start all components for you.
+// airflow standalone
+
+// # Visit localhost:8080 in the browser and use the admin account details
+// # shown on the terminal to login.
+// # Enable the example_bash_operator dag in the home page
