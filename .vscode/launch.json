@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "env": {"AIRFLOW__CORE__EXECUTOR": "DebugExecutor"}
+            "env": {"AIRFLOW__CORE__EXECUTOR": "DebugExecutor"},
+            "justMyCode": false,
         }
     ]
 }
